@@ -16,7 +16,12 @@ if [[ "$changed_files" == *.rst ]]
 then
     echo "${green} DUDE ! Awesome we found some .rst files in your last commit, lets run tests against them!${reset}"
     echo "${yellow} Start running spell, link and html checks, please be patient ....!${reset}"
-#else
+    for line in $changed_files; do
+        sphinx-build -c ../docs/ -b html -d ../testbuilds/docstrees ../docs ../testbuilds/html ../$line
+    done
+
+    
+    #else
 #    echo "rst not found."
 fi
 
