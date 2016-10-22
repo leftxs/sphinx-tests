@@ -8,7 +8,7 @@ green=`tput setaf 2`
 yellow=`tput setaf 3`
 reset=`tput sgr0`
 
-changed_files=$(git diff HEAD~1 --name-only)
+changed_files=$(git diff HEAD~1 --name-only | grep ".*\.rst$")
 #changed_files="$(git diff HEAD~1 --name-only | grep ".*\.rst$")"
 
 #echo "$changed_files" | grep --quiet "$1" && eval "$2"
