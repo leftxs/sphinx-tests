@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # We like color output
 # Colors
