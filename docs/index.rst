@@ -14,4 +14,4 @@ Contents:
    test
    foo
 
-hHello, there
+Hello, there
