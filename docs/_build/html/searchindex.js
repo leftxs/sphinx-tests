@@ -1,1 +1,0 @@
-Search.setIndex({envversion:46,filenames:["index","test"],objects:{},objnames:{},objtypes:{},terms:{content:0,index:0,modul:0,page:0,search:0},titles:["Welcome to sphinx-tests&#8217;s documentation!","Test"],titleterms:{document:0,indic:0,sphinx:0,tabl:0,test:[0,1],welcom:0}})

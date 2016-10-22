@@ -10,14 +10,8 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   
+
    test
+   foo
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+This is a test.
