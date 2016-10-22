@@ -1,4 +1,4 @@
 Index
 =====
 
-This is a typooo
+This is a typoooo
