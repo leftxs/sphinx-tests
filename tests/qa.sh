@@ -17,13 +17,11 @@ then
     echo "${green} DUDE ! Awesome we found some .rst files in your last commit, lets run tests against them!${reset}"
     echo "${yellow} Start running spell, link and html checks, please be patient ....!${reset}"
     for line in $changed_files; do
-       docker run -it --rm -v "${PWD}":/source:rw testthedocs/ttd.coala:1 '-c=/source/.coafile' DOCS
-       docker run --rm -v "${PWD}/docs":/build/docs:rw -u "$(id -u)":"$(id -g)" quay.io/tiramisu/mr.docs testhtml
-       docker run --rm -v "${PWD}/docs":/build/docs:rw -u "$(id -u)":"$(id -g)" quay.io/tiramisu/mr.docs spellcheck
-
+        docker run -it --rm --entrypoint coala-ci -v "${PWD}":/source:rw testthedocs/ttd.coala:1 '-c=/source/.coafile' DOCS
+        docker run --rm -v "${PWD}/docs":/build/docs:rw -u "$(id -u)":"$(id -g)" quay.io/tiramisu/mr.docs testhtml
+        docker run --rm -v "${PWD}/docs":/build/docs:rw -u "$(id -u)":"$(id -g)" quay.io/tiramisu/mr.docs spellcheck
     done
 
-    
     #else
 #    echo "rst not found."
 fi
