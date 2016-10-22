@@ -14,4 +14,4 @@ Contents:
    test
    foo
 
-Helloo
+Hello
